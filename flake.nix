@@ -40,6 +40,11 @@
             program = "${runDevServer}/bin/run-dev-server";
             args = [ "server" ];
           };
+          build = {
+            name = "Build website";
+            type = "app";
+            program = "${pkgs.hugo}/bin/hugo";
+          };
           publish = {
             name = "Publish the website";
             type = "app";
