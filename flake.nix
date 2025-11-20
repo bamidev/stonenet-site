@@ -14,7 +14,7 @@
           set -e
 
           ${hugo}/bin/hugo
-          ${rsync}/bin/rsync -p 12346 ./public stonenet@stonenet.org:/var/www/stonenet.org
+          ${rsync}/bin/rsync --delete -r -e '${openssh}/bin/ssh -p 12346' ./public/* stonenet@stonenet.org:/var/www/stonenet.org
         '');
       in {
         apps.publish = {
