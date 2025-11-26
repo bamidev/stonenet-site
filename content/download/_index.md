@@ -9,7 +9,7 @@ Currently, there are Debian packages and Nix modules for Stonenet.
 For any debian-based distro, you can install Stonenet like so:
 ```
 wget -qO- - https://get.stonenet.org/gpg-key.pub | gpg --dearmor | sudo tee /usr/share/keyrings/stonenet.gpg
-echo "deb [signed-by=/usr/share/keyrings/stonenet.gpg] http://get.stonenet.org/debian stable main" > /etc/apt/sources.list.d/stonenet.list
+echo "deb [signed-by=/usr/share/keyrings/stonenet.gpg] http://get.stonenet.org/debian stable main" | sudo tee /etc/apt/sources.list.d/stonenet.list
 sudo apt update
 sudo apt install stonenet stonenet-desktop
 ```
